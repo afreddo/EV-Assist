@@ -7,6 +7,8 @@ function App() {
 
    // new line start
   const [profileData, setProfileData] = useState(null)
+  const [locationData, setLocationData] = useState(null)
+  const [address, setAddress] = useState("");
 
   function getData() {
     axios({
@@ -25,6 +27,22 @@ function App() {
         console.log(error.response.headers)
         }
     })}
+    function getLocation() {
+    axios({
+      method: "GET",
+      url:"/location/" + address,
+    })
+    .then((response) => {
+      const res =response.data
+      setLocationData(({
+        location: res.location}))
+    }).catch((error) => {
+      if (error.response) {
+        console.log(error.response)
+        console.log(error.response.status)
+        console.log(error.response.headers)
+        }
+    })}
     //end of new line
 
   return (
@@ -34,6 +52,15 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
+            <form>
+      <label>Enter your address:
+        <input
+            type="text"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+        />
+      </label>
+    </form>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -44,10 +71,9 @@ function App() {
         </a>
 
         {/* new line start*/}
-         <p>To get your profile details: </p><button onClick={getData}>Click me</button>
-        {profileData && <div>
-              <p>Profile name: {profileData.profile_name}</p>
-              <p>About me: {profileData.about_me}</p>
+         <p>To get your location: </p><button onClick={getLocation}>Click me</button>
+        {locationData && <div>
+              <p>Location: {locationData.location}</p>
             </div>
         }
          {/* end of new line */}
