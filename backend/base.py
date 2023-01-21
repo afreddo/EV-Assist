@@ -7,17 +7,7 @@ api = Flask(__name__)
 
 api_key = 'CBLilVZ0bLDqjI5NvabP3pZbXgRF5VvYYFQwIHqZ'
 
-@api.route('/profile')
-def my_profile():
-    response_body = {
-        "name": "Nagato",
-        "about": "Hello! I'm a full stack developer that loves python and javascript"
-    }
-
-    return response_body
-
-
-@api.route('/location/<location>')
+@api.route('/station/<location>')
 def my_location(location):
     print(location)
     print(type(location))

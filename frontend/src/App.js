@@ -1,41 +1,29 @@
 import { useState } from 'react'
 import axios from "axios";
-import logo from './logo.svg';
+import logo from './car-svgrepo-com.svg';
 import './App.css';
+import DisplayFormDataInTable from "./data_table/display_form_data_in_table"
 
 function App() {
 
    // new line start
-  const [profileData, setProfileData] = useState(null)
-  const [locationData, setLocationData] = useState(null)
-  const [address, setAddress] = useState("");
+  const [stationData, setStationData] = useState(null)
+  const [streetName, setStreetName] = useState("");
+  const [city, setCity] = useState("");
+  const [state, setState] = useState("");
 
-  function getData() {
+    function getStation() {
     axios({
       method: "GET",
-      url:"/profile",
+      url:"/station/" + streetName + city + state,
     })
     .then((response) => {
       const res =response.data
-      setProfileData(({
-        profile_name: res.name,
-        about_me: res.about}))
-    }).catch((error) => {
-      if (error.response) {
-        console.log(error.response)
-        console.log(error.response.status)
-        console.log(error.response.headers)
-        }
-    })}
-    function getLocation() {
-    axios({
-      method: "GET",
-      url:"/location/" + address,
-    })
-    .then((response) => {
-      const res =response.data
-      setLocationData(({
-        location: res.location}))
+      setStationData(({
+        location: res.location,
+        name: res.name,
+        distance: res.distance
+        }))
     }).catch((error) => {
       if (error.response) {
         console.log(error.response)
@@ -44,40 +32,80 @@ function App() {
         }
     })}
     //end of new line
-
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          EV-Assist
         </p>
-            <form>
-      <label>Enter your address:
-        <input
-            type="text"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-        />
-      </label>
-    </form>
+        <a
+          className="App-text"
+        >
+          A useful tool for determining the closest electrical vehicle charging station to a given address
+          within the United States.
+        </a>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://afdc.energy.gov/stations/#/find/nearest"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Data Source
         </a>
 
-        {/* new line start*/}
-         <p>To get your location: </p><button onClick={getLocation}>Click me</button>
-        {locationData && <div>
-              <p>Location: {locationData.location}</p>
-            </div>
-        }
-         {/* end of new line */}
+
+         {/* end of new line*/}
       </header>
+
+      <source className="App-source">
+
+      </source>
+
+      <body className="App-body">
+         <form>
+          <label>Enter your Street name/address:
+            <input
+                type="text"
+                value={streetName}
+                onChange={(e) => setStreetName(e.target.value)}
+            />
+          </label>
+          </form>
+
+          <form>
+          <label>Enter your city:
+            <input
+                type="text"
+                value={city}
+                onChange={(e) => setCity(e.target.value)}
+            />
+          </label>
+          </form>
+
+          <form>
+          <label>Enter your state:
+            <input
+                type="text"
+                value={state}
+                onChange={(e) => setState(e.target.value)}
+            />
+          </label>
+          </form>
+
+          {/* new line start*/}
+         <p>To get your location: </p><button onClick={getStation}>Click me</button>
+          {stationData && <div>
+              <p>Name: {stationData.name}</p>
+              <p>Location: {stationData.location}</p>
+              <p>Distance: {stationData.distance}</p>
+            </div>
+          }
+         {/* end of new line */}
+
+         {/* new line start*/}
+         <DisplayFormDataInTable />
+      </body>
     </div>
   );
 }
