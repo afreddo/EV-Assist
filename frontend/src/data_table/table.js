@@ -3,10 +3,9 @@ function Table({tableData}){
         <table className="table">
             <thead>
                 <tr>
+                    <th>Station Name</th>
+                    <th>Location</th>
                     <th>Distance</th>
-                    <th>Street Name</th>
-                    <th>City</th>
-                    <th>State</th>
                 </tr>
             </thead>
             <tbody>
@@ -15,9 +14,9 @@ function Table({tableData}){
                     return(
                         <tr key={index}>
                             <td>{index+1}</td>
-                            <td>{data.streetName}</td>
-                            <td>{data.city}</td>
-                            <td>{data.state}</td>
+                            <td>{data.name}</td>
+                            <td>{data.location}</td>
+                            <td>{data.distance}</td>
                         </tr>
                     )
                 })

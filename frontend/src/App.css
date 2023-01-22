@@ -25,18 +25,18 @@
 }
 
 .App-body {
-  background-color: #6495ED;
-  min-height: 60vh;
+  background-color: #282c34;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(14px + 2vmin);
+  font-size: calc(4px + 2vmin);
   color: white;
 }
 
 .App-body2 {
-  background-color: #6495ED;
+  background-color: #282c34;
   min-height: 60vh;
   display: flex;
   flex-direction: column;
@@ -53,7 +53,7 @@
 }
 .App-link {
   color: #61dafb;
-  font-size: calc(6px + 2vmin);
+  font-size: calc(4px + 2vmin);
 }
 
 
@@ -64,4 +64,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-table{
+    font-size: calc(4px + 2vmin);
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.App-th {
+  color: white;
+}
+
+.App-td {
+  width: 300px;
+  text-align: center;
+  border: 1px solid white;
+  padding: 5px;
 }
