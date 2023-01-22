@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from 'react'
-import FormInput from "./form_input";
 import Table from "./table";
 import '../App.css';
 import axios from "axios";
@@ -73,7 +72,7 @@ function Main(){
           </form>
 
           {/* new line start*/}
-         <p>To get your location: </p><button onClick={getStation}>Click me</button>
+         <p>To find nearby stations: </p><button onClick={getStation}>Click me</button>
           {stationData && <div>
               <table className="App-table">
             <thead className="App-th">
