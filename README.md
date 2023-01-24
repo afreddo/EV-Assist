@@ -1,10 +1,9 @@
 # EV-Assist
-1. Project's Title
 
 This project is EV-Assist. It is a webapp that allows users to find the nearest electric vehicle charging stations to any location within the United States.
 
 
-2. Project Description
+**Project Description**
 
 This project has a frontend built with React, HTML, and CSS. The backend is constructed in python using the Flask framework. 
 
@@ -12,28 +11,29 @@ The webpage contains a form that the user can plug in their address of interest.
 
 The information returned by the backend API is then added to a table shown on the webpage.
 
-4. How to Install and Run the Project
+**How to Install and Run the Project**
 
-Dependencies requred:
-- flask
-- requests
-- axios
+_**Dependencies required:**_
 
-To install and run the project:
+- install python dependencies from requirements.txt
 
-clone the project to a local directory
+- install javascript dependencies from package.json
 
-install dependencies
+**_To install and run the project:_**
 
-In the terminal: navigate to /EV-Assist/frontend
+1. clone the project to a local directory
 
-In the terminal: enter npm run start-backend
- - this starts the flask API
+2. install dependencies
 
-In the terminal: enter npm start
-- this launches the frontend webpage
+3. In the terminal: navigate to /EV-Assist/frontend
 
-Webpage
+4. In the terminal: enter npm run start-backend
+   - this starts the flask API
+
+5. In the terminal: enter npm start
+   - this launches the frontend webpage
+
+**Webpage**
 
 ![image](https://user-images.githubusercontent.com/64040498/213895796-9909dd4b-3a62-4b3c-b51e-5af6d2781bc3.png)
 
