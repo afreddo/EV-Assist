@@ -35,15 +35,12 @@ _**Dependencies required:**_
 
 **Webpage**
 
-![image](https://user-images.githubusercontent.com/64040498/213895796-9909dd4b-3a62-4b3c-b51e-5af6d2781bc3.png)
+![homepage](https://github.com/afreddo/EV-Assist/assets/64040498/30c0e0f7-e3b5-4642-af10-2761ddccf317)
 
-Example of inserted address
+Example of Search Page
 
-![image](https://user-images.githubusercontent.com/64040498/213895894-988e541d-b427-4ac5-9412-8bc7e4da40ca.png)
+![searchpage](https://github.com/afreddo/EV-Assist/assets/64040498/bd19572c-6102-48ce-9410-e452ce3516f9)
 
-Example of table generated
-
-![image](https://user-images.githubusercontent.com/64040498/213895904-fe995e0e-3cc2-485a-ae33-6737de045b43.png)
 
 
 
