@@ -15,9 +15,9 @@ The information returned by the backend API is then added to a table shown on th
 
 _**Dependencies required:**_
 
-- install python dependencies from requirements.txt
+- install python dependencies from ./requirements.txt
 
-- install javascript dependencies from package.json
+- install javascript dependencies from ./frontend/package.json
 
 **_To install and run the project:_**
 
