@@ -287,6 +287,41 @@ object {}
   }
 }
 
+<<<<<<< HEAD
+=======
+.App-header {
+  background-color: #282c34;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(50px + 2vmin);
+  color: white;
+}
+
+.App-body {
+  background-color: #282c34;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(4px + 2vmin);
+  color: white;
+}
+
+.App-body2 {
+  background-color: #282c34;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(14px + 2vmin);
+  color: white;
+}
+>>>>>>> 1893f5d80f2255b50fa1f34dc95ef709920c600d
 .App-text {
   background-color: #282c34;
   min-height: 10vh;
