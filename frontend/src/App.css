@@ -1,6 +1,280 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@900;1000&display=swap');
+
+:root {
+  --dark-blue:#274001;
+  --medium-blue:#55A603;
+  --accent-green:#D7F205;
+  --light-blue:#C6E6F5cc;
 }
+
+  /*  ----- Viewport ----- elements inherited by all remaining elements ----- */
+  body {       /* Can alternatively define in html {} or :root {} */
+    background-color:var(--dark-blue);
+    background-image: url('images/forest2.jpg');
+    background-size: 100%;
+    background-attachment: fixed;
+    background-position: top left;
+    background-repeat:no-repeat;
+    font-family:Raleway; /* Define with at least one font name and its related generic family name.*/
+    margin:0 auto;
+    padding:2%;
+    min-width:30%;
+    max-width: 90%;
+  }
+
+  header {
+    color: var(--medium-blue);
+    background-color: var(--dark-blue);
+    padding: 3% 30% 3% 30%;
+    text-align: center;
+    min-width: 300px;
+  }
+  main {
+    color:var(--dark-blue);
+    background-color: var(--light-blue);
+    padding: 5%;
+    min-width: 300px;
+  }
+section {}
+  article {}
+    #topic1 {}
+    #topic2 {}
+div {}
+aside {}
+footer {
+  color: var(--accent-green);
+  background-color: var(--dark-blue);
+  padding: 3% 30% 3% 30%;
+  text-align: center;
+  min-width: 300px;
+}
+
+ /* ----- Anchors ----- Text links */
+ a[class=App-link] {
+  color: var(--medium-blue)
+ }
+ 
+ a {
+  color: var(--light-blue)
+ }
+ a:link {}
+ a:hover {}
+ a:active {}
+ a:visited {}
+ 
+ /*  ----- Navigation ----- Override text links for navigation only.  */
+ nav {
+   text-decoration: none;
+   background-color: var(--medium-blue);
+   text-align:center;
+ }
+ nav a {
+   background-color: var(--accent-green);
+   color: var(--dark-blue);
+   font-weight:bold;
+   text-decoration: none;
+   padding:3%;
+   margin: auto 2%;
+   max-width:100%;
+   vertical-align:middle;
+   border-radius: 50%;
+   
+ }
+ nav a:hover {
+   text-decoration: none;
+   background-color: var(--light-blue);
+ }
+ /*  -----  Typography  ----- */
+ p {}
+ br {}
+ ol, ul, dl {}
+ li {}
+ dt {
+   margin-top: 3%;
+   margin-bottom: 1%;
+ }
+ dd {}
+ 
+ h1, h2, h3, h4, h5, h6 {} 
+ h1 {}
+ h2 {}
+ h3 {}
+ h4 {}
+ h5 {}
+ h6 {}
+ 
+ abbr {}
+ acronym {}
+ address {}
+ blockquote {}
+   q {}
+   cite {}
+ em {}
+ hr {}
+ mark {}
+ s {}
+ span {
+   padding: 3%;
+ }
+ strong {}
+ sub {}
+ sup {}
+ time {}
+ 
+ /*  ----- Coding or instructional typography ----- */
+ pre {}
+ code {}
+ kbd {}
+ samp {}
+ var {}
+ del {} 
+ ins {}
+ 
+ /*  ----- Table ----- */
+ table {
+  width: 100%;
+  min-width: 600px;
+  text-align:center;
+  border:5px solid var(--dark-blue);
+  border-collapse: collapse;
+}
+tr, tr, td {
+  border:1px solid var(--dark-blue);
+  padding:1%;
+}
+caption[class=table] {
+  font-size:125%;
+  margin-bottom:1%;
+  margin-top: 3%;
+}
+caption {
+  font-size:150%;
+  margin-bottom:3%;
+}
+thead {
+  border:5px solid var(--dark-blue);
+  color: var(--light-blue);
+  background-color: var(--dark-blue);
+}
+tbody {
+  color: var(--dark-blue);
+  background-color: var(--accent-green);
+}
+tfoot {}
+tr {}
+  tr:nth-child(even) td {
+    background-color:var(--medium-blue);
+  }
+  tr:nth-child(odd) td {
+    background-color:var(--light-blue);
+  }
+th {}
+td {
+  min-width: 5em;
+}
+  td:nth-child(1) {}
+colgroup {}
+data {}
+datalist {}
+
+ /*  ----- Form ----- */
+ form, button, input, select, textarea {
+  font-family:inherit;
+}
+fieldset {
+  border: 3px solid var(--dark-blue);
+  background-color: var(--medium-blue);
+  margin-top:2%;
+  padding:2%;
+}
+select {
+  width: 80%;
+}
+  legend {
+    color:var(--accent-green);
+    background-color: var(--medium-blue);
+    border: 3px solid var(--dark-blue);
+    font-size: 110%;
+    border-bottom: 0;
+  }
+label {
+  display: block;
+  margin-top:2%;
+  font-size: 85%;
+
+}
+button[class=wait] {
+  background-color: var(--medium-blue);
+  width: 2em;
+  height: 2em;
+  font-size: 20px;
+  margin-bottom: 3%;
+}
+  button {
+    background-color: var(--accent-green);
+    width: 30%;
+    height: 5em;
+    font-size: 20px;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    border-radius: 50%;
+    vertical-align:middle;
+
+  }
+  input {
+    font-size: 120%;
+    padding: 1%;
+    width:60%;
+  }
+    input[type=checkbox]:checked + label {
+      color:var(--accent-green);
+    }
+    input[type="number"] {
+      width:20%;
+    }
+    input[type="date"] {
+      width:98%;
+    }
+
+  output {color:blue; font-weight:bold;}
+
+  ::placeholder {
+    color:var(--dark-blue)
+  }
+  :required { 
+    border:3px solid var(--dark-blue); 
+  }
+  :autofocus:outline-style {color:var(--accent-green);}
+  meter {}
+  progress {}
+    optgroup {}
+    option {
+      font-size: 110%;
+      padding: 3%;
+    }
+  textarea {
+    font-size: 110%;
+    padding: 2%;
+    width: 50%
+  }
+
+  :focus{
+
+}
+
+
+/* ----- Media ----- */
+figure {}
+  figcaption {}
+  figure img {}
+svg {}
+picture {}
+  source {}
+iframe {}
+video {}
+audio {}
+embed {}
+object {}
 
 .App-logo {
   height: 25vmin;
@@ -13,38 +287,6 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 40vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(50px + 2vmin);
-  color: white;
-}
-
-.App-body {
-  background-color: #6495ED;
-  min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(14px + 2vmin);
-  color: white;
-}
-
-.App-body2 {
-  background-color: #6495ED;
-  min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(14px + 2vmin);
-  color: white;
-}
 .App-text {
   background-color: #282c34;
   min-height: 10vh;
@@ -53,7 +295,7 @@
 }
 .App-link {
   color: #61dafb;
-  font-size: calc(6px + 2vmin);
+  font-size: calc(4px + 2vmin);
 }
 
 
@@ -64,4 +306,21 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-table{
+    font-size: calc(4px + 2vmin);
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.App-th {
+  color: white;
+}
+
+.App-td {
+  width: 300px;
+  text-align: center;
+  border: 1px solid white;
+  padding: 5px;
 }
